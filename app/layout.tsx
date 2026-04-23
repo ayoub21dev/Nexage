@@ -27,6 +27,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${displayFont.variable} ${bodyFont.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-brand-black text-brand-offwhite font-body selection:bg-brand-crimson selection:text-white">

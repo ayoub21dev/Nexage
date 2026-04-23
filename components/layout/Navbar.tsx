@@ -51,7 +51,7 @@ export function Navbar() {
             Login
           </button>
           <button className="bg-gradient-to-r from-[#a30202] to-[#5a0100] text-brand-white font-semibold text-sm px-8 py-3 rounded-xl hover:shadow-[0_10px_25px_-10px_rgba(163,2,2,0.4)] transition-all duration-300">
-            Let's Talk
+            Let&apos;s Talk
           </button>
         </div>
       </nav>

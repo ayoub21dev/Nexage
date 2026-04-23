@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import { ArrowRight, Eye, Play } from 'lucide-react'
+import { ArrowRight, Play } from 'lucide-react'
 import Image from 'next/image'
 import { Constellation } from '@/components/effects/Constellation'
 

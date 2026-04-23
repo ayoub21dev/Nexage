@@ -15,8 +15,6 @@ export function Constellation() {
     let particles: Particle[] = []
     const particleCount = 120 // Increased from 80
     const connectionDistance = 180 // Increased from 150
-    const mouse = { x: 0, y: 0, active: false }
-
     class Particle {
       x: number
       y: number
