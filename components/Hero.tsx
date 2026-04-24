@@ -6,7 +6,31 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-white pt-20">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#FAFAFA] pt-20">
+      {/* Breathing Red Lines */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-50">
+        <motion.div 
+          className="absolute top-[30%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-nexage-red/40 to-transparent"
+          animate={{ opacity: [0.1, 0.5, 0.1], scaleX: [0.9, 1.1, 0.9] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute top-[75%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-nexage-red/30 to-transparent"
+          animate={{ opacity: [0.1, 0.6, 0.1], scaleX: [0.8, 1.2, 0.8] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        />
+        <motion.div 
+          className="absolute top-0 left-[25%] w-[1px] h-full bg-gradient-to-b from-transparent via-nexage-red/30 to-transparent"
+          animate={{ opacity: [0.1, 0.4, 0.1], scaleY: [0.8, 1.2, 0.8] }}
+          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        />
+        <motion.div 
+          className="absolute top-0 right-[25%] w-[1px] h-full bg-gradient-to-b from-transparent via-nexage-red/40 to-transparent"
+          animate={{ opacity: [0.2, 0.6, 0.2], scaleY: [0.9, 1.1, 0.9] }}
+          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+        />
+      </div>
+
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 z-0 pointer-events-none dot-pattern opacity-30"></div>
       
@@ -61,9 +85,9 @@ export default function Hero() {
               className="relative z-10 w-full max-w-lg animate-float"
             >
               <Image
-                src="/hero_mockup.png"
+                src="/hero_mockup_v2.png"
                 alt="Nexage Digital Experience Mockup"
-                width={700}
+                width={800}
                 height={600}
                 className="object-contain drop-shadow-2xl"
                 priority
