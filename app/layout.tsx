@@ -1,22 +1,12 @@
 import type { Metadata } from "next";
-import { Rajdhani, Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const displayFont = Rajdhani({
-  variable: "--font-rajdhani",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
-
-const bodyFont = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "NEXAGE | Digital Solutions. Intelligent Future.",
-  description: "From powerful websites to AI automation, we build digital solutions that help businesses grow, scale and lead the future.",
+  title: "Nexage | Engineering Digital Experiences",
+  description: "Digital agency crafting high-performance websites and stunning designs for the next generation.",
 };
 
 export default function RootLayout({
@@ -25,12 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${displayFont.variable} ${bodyFont.variable} h-full antialiased dark`}
-    >
-      <body className="min-h-full flex flex-col bg-brand-black text-brand-offwhite font-body selection:bg-brand-crimson selection:text-white">
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} min-h-screen bg-white text-black antialiased relative`}>
+        <div className="noise-overlay"></div>
         {children}
       </body>
     </html>
