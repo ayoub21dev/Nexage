@@ -7,108 +7,107 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#FAFAFA] pt-20">
-      {/* Breathing Red Lines */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-50">
-        <motion.div 
-          className="absolute top-[30%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-nexage-red/40 to-transparent"
-          animate={{ opacity: [0.1, 0.5, 0.1], scaleX: [0.9, 1.1, 0.9] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div 
-          className="absolute top-[75%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-nexage-red/30 to-transparent"
-          animate={{ opacity: [0.1, 0.6, 0.1], scaleX: [0.8, 1.2, 0.8] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        />
-        <motion.div 
-          className="absolute top-0 left-[25%] w-[1px] h-full bg-gradient-to-b from-transparent via-nexage-red/30 to-transparent"
-          animate={{ opacity: [0.1, 0.4, 0.1], scaleY: [0.8, 1.2, 0.8] }}
-          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-        />
-        <motion.div 
-          className="absolute top-0 right-[25%] w-[1px] h-full bg-gradient-to-b from-transparent via-nexage-red/40 to-transparent"
-          animate={{ opacity: [0.2, 0.6, 0.2], scaleY: [0.9, 1.1, 0.9] }}
-          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-        />
-      </div>
-
+      
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 z-0 pointer-events-none dot-pattern opacity-30"></div>
       
-      <div className="container mx-auto px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          {/* Left Side - 50% */}
-          <div className="w-full lg:w-1/2 flex flex-col items-start">
-            <div className="flex items-center space-x-4 mb-8">
-               <span className="text-nexage-red font-black text-lg tracking-tighter">01/06</span>
-               <div className="h-6 w-[1px] bg-gray-300"></div>
-               <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-black">
-                 Innovation First
-               </span>
+      {/* Floating Left Indicator */}
+      <div className="absolute left-6 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center space-y-6 z-20">
+        <div className="text-center font-black leading-none flex flex-col items-center">
+           <span className="text-xl block text-black">01</span>
+           <span className="text-[10px] text-gray-400 block mt-1">/06</span>
+        </div>
+        <div className="flex flex-col space-y-3 mt-4">
+           <div className="w-1.5 h-1.5 bg-nexage-red rounded-full shadow-[0_0_8px_rgba(255,0,0,0.8)]"></div>
+           <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
+           <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
+        </div>
+        
+        {/* Scroll To Explore Indicator */}
+        <div className="absolute top-48 flex flex-col items-center space-y-12">
+          <span className="rotate-90 text-[8px] font-black uppercase tracking-[0.6em] text-gray-400 origin-left whitespace-nowrap">
+            Scroll to Explore
+          </span>
+          <div className="w-[1px] h-20 bg-gradient-to-b from-gray-300 to-transparent"></div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-8 relative z-10 w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          
+          {/* Left Side Content */}
+          <div className="w-full lg:w-5/12 flex flex-col items-start relative z-30 pt-10 lg:pt-0">
+            
+            {/* Top Label with Brackets */}
+            <div className="inline-flex items-center relative px-4 py-2 mb-8">
+              <div className="absolute top-0 left-0 w-2 h-2 border-t-[1.5px] border-l-[1.5px] border-nexage-red"></div>
+              <div className="absolute bottom-0 right-0 w-2 h-2 border-b-[1.5px] border-r-[1.5px] border-nexage-red"></div>
+              <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-500 font-bold whitespace-nowrap">
+                We design. We code. We <span className="text-nexage-red font-black">elevate</span> brands.
+              </span>
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.1] tracking-tight mb-8 text-black">
+            <h1 className="text-[40px] md:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight mb-8 text-black">
               Engineering <br />
               <span className="text-nexage-red">Digital</span> <br />
-              <span className="text-2xl md:text-3xl">Experiences for the Next Generation.</span>
+              <span className="text-2xl md:text-3xl lg:text-4xl text-black">Experiences <br className="hidden md:block"/> for the Next Generation.</span>
             </h1>
 
-            <p className="text-gray-700 text-base md:text-lg max-w-sm mb-12 leading-relaxed font-medium">
+            <p className="text-gray-600 text-sm md:text-base max-w-[90%] mb-12 leading-relaxed font-medium">
               Nexage is a digital agency crafting high-performance websites and stunning designs that help forward-thinking brands stand out and scale faster.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-6 sm:space-y-0 sm:space-x-10">
+              {/* Sci-Fi Button */}
               <Link
                 href="#contact"
-                className="bg-black text-white px-10 py-4 rounded-full text-xs font-black uppercase tracking-[0.2em] hover:bg-nexage-red hover:shadow-lg transition-all duration-300"
+                className="relative group bg-black text-white px-10 py-4 text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 overflow-hidden shadow-[0_0_20px_rgba(255,0,0,0.15)] hover:shadow-[0_0_30px_rgba(255,0,0,0.4)]"
+                style={{ clipPath: 'polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)' }}
               >
-                Start a Project
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-600/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                {/* Red edge accents */}
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-1/2 bg-nexage-red shadow-[0_0_8px_red]"></div>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[2px] h-1/2 bg-nexage-red shadow-[0_0_8px_red]"></div>
+                
+                <span className="relative z-10 flex items-center space-x-4">
+                  <span>Start a Project</span>
+                  <span className="text-nexage-red text-lg">→</span>
+                </span>
               </Link>
+
               <Link
                 href="#work"
-                className="flex items-center space-x-3 text-xs font-black uppercase tracking-[0.2em] group hover:text-nexage-red transition-all"
+                className="flex items-center space-x-3 text-[10px] font-black uppercase tracking-[0.2em] text-gray-800 group hover:text-nexage-red transition-all"
               >
                 <span>View Our Work</span>
-                <span className="text-xl group-hover:translate-x-2 transition-transform">→</span>
+                <span className="text-nexage-red text-lg group-hover:translate-x-2 transition-transform">→</span>
               </Link>
             </div>
           </div>
 
-          {/* Right Side - 50% - Contained Mockup */}
-          <div className="w-full lg:w-1/2 relative flex justify-center items-center py-12">
-            {/* Red Radial Glow Under Mockup */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 bg-red-500/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
-
+          {/* Right Side - Mockup Image */}
+          <div className="w-full lg:w-7/12 relative mt-20 lg:mt-0 flex justify-end items-center pointer-events-none">
+            
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-              className="relative z-10 w-full max-w-lg animate-float"
+              initial={{ opacity: 0, scale: 0.9, x: 50 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 1.4, ease: "easeOut" }}
+              className="relative z-10 w-full lg:w-[145%] lg:translate-x-[20%] xl:w-[155%] xl:translate-x-[25%]"
             >
               <Image
                 src="/hero_mockup_v2.png"
                 alt="Nexage Digital Experience Mockup"
-                width={800}
-                height={600}
-                className="object-contain drop-shadow-2xl"
+                width={1800}
+                height={1350}
+                className="object-contain drop-shadow-[0_20px_50px_rgba(255,0,0,0.1)] w-full h-auto"
                 priority
               />
             </motion.div>
 
-            {/* SYSTEM ONLINE Badge */}
-            <div className="absolute top-0 right-0 md:right-10 flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-black/5 px-4 py-1.5 rounded-full">
-              <span className="text-[9px] font-black uppercase tracking-widest text-gray-500">System Online</span>
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_#22c55e]"></span>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Vertical Text Indicator */}
-      <div className="absolute left-6 bottom-20 hidden lg:flex flex-col items-center space-y-12">
-        <span className="rotate-90 text-[10px] font-black uppercase tracking-[0.6em] text-gray-300 origin-left whitespace-nowrap">
-          Scroll to Explore
-        </span>
-        <div className="w-[1px] h-20 bg-gradient-to-b from-gray-200 to-transparent"></div>
+          </div>
+
+        </div>
       </div>
     </section>
   );
