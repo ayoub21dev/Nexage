@@ -3,26 +3,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import HeroBackdropAnimation from "./HeroBackdropAnimation";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#FAFAFA] pt-20">
-      
+    <section className="relative isolate min-h-screen flex items-center overflow-hidden bg-[#FAFAFA] pt-20">
+      <HeroBackdropAnimation />
+
       {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 z-0 pointer-events-none dot-pattern opacity-30"></div>
-      
+      <div className="absolute inset-0 z-[1] pointer-events-none dot-pattern opacity-[0.04]"></div>
+
       {/* Floating Left Indicator */}
       <div className="absolute left-6 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center space-y-6 z-20">
         <div className="text-center font-black leading-none flex flex-col items-center">
-           <span className="text-xl block text-black">01</span>
-           <span className="text-[10px] text-gray-400 block mt-1">/06</span>
+          <span className="text-xl block text-black">01</span>
+          <span className="text-[10px] text-gray-400 block mt-1">/06</span>
         </div>
         <div className="flex flex-col space-y-3 mt-4">
-           <div className="w-1.5 h-1.5 bg-nexage-red rounded-full shadow-[0_0_8px_rgba(255,0,0,0.8)]"></div>
-           <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
-           <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
+          <div className="w-1.5 h-1.5 bg-nexage-red rounded-full shadow-[0_0_8px_rgba(255,0,0,0.8)]"></div>
+          <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
+          <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
         </div>
-        
+
         {/* Scroll To Explore Indicator */}
         <div className="absolute top-48 flex flex-col items-center space-y-12">
           <span className="rotate-90 text-[8px] font-black uppercase tracking-[0.6em] text-gray-400 origin-left whitespace-nowrap">
@@ -34,10 +37,8 @@ export default function Hero() {
 
       <div className="container mx-auto px-8 relative z-10 w-full">
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          
           {/* Left Side Content */}
           <div className="w-full lg:w-5/12 flex flex-col items-start relative z-30 pt-10 lg:pt-0">
-            
             {/* Top Label with Brackets */}
             <div className="inline-flex items-center relative px-4 py-2 mb-8">
               <div className="absolute top-0 left-0 w-2 h-2 border-t-[1.5px] border-l-[1.5px] border-nexage-red"></div>
@@ -50,7 +51,9 @@ export default function Hero() {
             <h1 className="text-[40px] md:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight mb-8 text-black">
               Engineering <br />
               <span className="text-nexage-red">Digital</span> <br />
-              <span className="text-2xl md:text-3xl lg:text-4xl text-black">Experiences <br className="hidden md:block"/> for the Next Generation.</span>
+              <span className="text-2xl md:text-3xl lg:text-4xl text-black">
+                Experiences <br className="hidden md:block" /> for the Next Generation.
+              </span>
             </h1>
 
             <p className="text-gray-600 text-sm md:text-base max-w-[90%] mb-12 leading-relaxed font-medium">
@@ -62,16 +65,16 @@ export default function Hero() {
               <Link
                 href="#contact"
                 className="relative group bg-black text-white px-10 py-4 text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 overflow-hidden shadow-[0_0_20px_rgba(255,0,0,0.15)] hover:shadow-[0_0_30px_rgba(255,0,0,0.4)]"
-                style={{ clipPath: 'polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)' }}
+                style={{ clipPath: "polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)" }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-600/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                 {/* Red edge accents */}
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-1/2 bg-nexage-red shadow-[0_0_8px_red]"></div>
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[2px] h-1/2 bg-nexage-red shadow-[0_0_8px_red]"></div>
-                
+
                 <span className="relative z-10 flex items-center space-x-4">
                   <span>Start a Project</span>
-                  <span className="text-nexage-red text-lg">→</span>
+                  <ArrowRight className="h-4 w-4 text-nexage-red" strokeWidth={2.4} />
                 </span>
               </Link>
 
@@ -80,15 +83,17 @@ export default function Hero() {
                 className="flex items-center space-x-3 text-[10px] font-black uppercase tracking-[0.2em] text-gray-800 group hover:text-nexage-red transition-all"
               >
                 <span>View Our Work</span>
-                <span className="text-nexage-red text-lg group-hover:translate-x-2 transition-transform">→</span>
+                <ArrowRight
+                  className="h-4 w-4 text-nexage-red transition-transform group-hover:translate-x-2"
+                  strokeWidth={2.4}
+                />
               </Link>
             </div>
           </div>
 
           {/* Right Side - Mockup Image */}
           <div className="w-full lg:w-7/12 relative mt-20 lg:mt-0 flex justify-end items-center pointer-events-none">
-            
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9, x: 50 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 1.4, ease: "easeOut" }}
@@ -103,10 +108,7 @@ export default function Hero() {
                 priority
               />
             </motion.div>
-
-
           </div>
-
         </div>
       </div>
     </section>
