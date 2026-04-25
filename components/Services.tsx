@@ -34,7 +34,7 @@ export default function Services() {
       title: "Web\nDevelopment .",
       description: "High-performance websites and web applications built with clean code and modern technologies.",
       bullets: ["Custom Websites", "Web Applications", "E-Commerce Solutions", "CMS Development", "Performance Optimization"],
-      image: "/hero_mockup_v2.png",
+      image: "/devservice.png",
       icons: [
         <Code2 key="web-1" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
         <Terminal key="web-2" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
@@ -47,7 +47,7 @@ export default function Services() {
       title: "Graphic\nDesign .",
       description: "Visually compelling designs that communicate, engage, and leave a lasting impression.",
       bullets: ["Brand Identity", "UI/UX Design", "Web & Mobile Design", "Marketing Design", "Motion Graphics"],
-      image: "/Herosection.png",
+      image: "/Graphicdesign.png",
       icons: [
         <PenTool key="design-1" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
         <Palette key="design-2" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
@@ -60,7 +60,7 @@ export default function Services() {
       title: "AI\nSolutions .",
       description: "Intelligent automation and machine learning models tailored to optimize your business operations.",
       bullets: ["Machine Learning", "Natural Language Processing", "Predictive Analytics", "Process Automation", "AI Consultation"],
-      image: "/devweb.png", // Using the existing image as placeholder
+      image: "/AIsolution.png",
       icons: [
         <Cpu key="ai-1" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
         <Brain key="ai-2" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
@@ -127,89 +127,102 @@ export default function Services() {
                 style={{ clipPath: mainClipPath }}
               >
                 <div
-                  className="relative bg-white h-full w-full p-8 md:p-12 lg:p-16 flex flex-col md:flex-row gap-8 lg:gap-12"
+                  className="relative bg-white h-full w-full p-8 md:p-12 lg:p-16 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16"
                   style={{ clipPath: mainClipPath }}
                 >
+                  {/* Background decoration */}
+                  <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-br from-transparent to-nexage-red/5 pointer-events-none"></div>
+
                   {/* Corner Red Accents */}
                   <CornerUpLeft
-                    className="absolute top-0 left-0 w-7 h-7 text-nexage-red/70 pointer-events-none group-hover:text-nexage-red transition-colors duration-300"
+                    className="absolute top-4 left-4 w-10 h-10 text-nexage-red/70 pointer-events-none group-hover:text-nexage-red transition-colors duration-300"
                     strokeWidth={1.8}
                   />
                   <CornerUpRight
-                    className="absolute top-0 right-0 w-7 h-7 text-nexage-red/70 pointer-events-none group-hover:text-nexage-red transition-colors duration-300"
+                    className="absolute top-4 right-4 w-10 h-10 text-nexage-red/70 pointer-events-none group-hover:text-nexage-red transition-colors duration-300"
                     strokeWidth={1.8}
                   />
                   <CornerDownRight
-                    className="absolute bottom-0 right-0 w-7 h-7 text-nexage-red/70 pointer-events-none group-hover:text-nexage-red transition-colors duration-300"
+                    className="absolute bottom-4 right-4 w-10 h-10 text-nexage-red/70 pointer-events-none group-hover:text-nexage-red transition-colors duration-300"
                     strokeWidth={1.8}
                   />
                   <CornerDownLeft
-                    className="absolute bottom-0 left-0 w-7 h-7 text-nexage-red/70 pointer-events-none group-hover:text-nexage-red transition-colors duration-300"
+                    className="absolute bottom-4 left-4 w-10 h-10 text-nexage-red/70 pointer-events-none group-hover:text-nexage-red transition-colors duration-300"
                     strokeWidth={1.8}
                   />
 
-                  {/* Left Side: Text */}
-                  <div className="flex-[1] flex flex-col items-start z-10">
-                    <span className="text-nexage-red font-black text-lg lg:text-xl mb-4 lg:mb-6 block">{service.id}</span>
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 lg:mb-6 tracking-tight text-black whitespace-pre-line leading-[1.05]">
-                      {titleParts[0]} <span className="text-nexage-red">.</span>
+                  {/* Left Side: Content */}
+                  <div className="flex flex-col items-start z-10">
+                    <span className="text-nexage-red font-bold text-lg mb-4 block leading-none">{service.id}</span>
+                    <h3 className="text-4xl md:text-5xl font-black text-black leading-[1.1] mb-5 tracking-tight uppercase whitespace-pre-line">
+                      {titleParts[0]}
                     </h3>
-                    <p className="text-sm lg:text-base text-gray-500 mb-8 font-medium leading-relaxed max-w-[95%]">
+                    <div className="w-2.5 h-2.5 bg-nexage-red rounded-full mb-6"></div>
+                    <p className="text-[15px] text-gray-600 leading-relaxed mb-8 max-w-[300px]">
                       {service.description}
                     </p>
 
-                    <div className="flex flex-col space-y-3 lg:space-y-4 mb-10">
+                    <ul className="space-y-3 mb-10">
                       {service.bullets.map((bullet) => (
-                        <div key={bullet} className="flex items-center space-x-3">
+                        <li key={bullet} className="flex items-center space-x-3 text-[13px] font-semibold text-gray-800">
                           <div className="w-1.5 h-1.5 bg-nexage-red flex-shrink-0"></div>
-                          <span className="text-[11px] lg:text-xs font-bold text-gray-700">{bullet}</span>
-                        </div>
+                          <span>{bullet}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
 
                     <Link
                       href="#"
-                      className="mt-auto text-[10px] lg:text-xs font-black uppercase tracking-[0.2em] text-gray-800 hover:text-nexage-red transition-all inline-flex items-center group/link"
+                      className="mt-auto text-[12px] font-black uppercase tracking-[0.15em] text-black hover:text-nexage-red transition-all inline-flex items-center group/link"
                     >
-                      <span>Learn More</span>
+                      <span>LEARN MORE</span>
                       <ArrowRight
-                        className="ml-3 h-4 w-4 text-nexage-red transition-transform group-hover/link:translate-x-2"
-                        strokeWidth={2.4}
+                        className="ml-2 h-4 w-4 transition-transform group-hover/link:translate-x-2"
+                        strokeWidth={2.5}
                       />
                     </Link>
                   </div>
 
-                  {/* Right Side: Image */}
-                  <div className="flex-[1] relative flex justify-end items-center pointer-events-none mt-12 md:mt-0">
-                    {/* Subtle Grid Lines behind image */}
-                    <div className="absolute inset-0 pointer-events-none hidden md:block opacity-20">
-                      <div className="absolute top-1/4 left-0 right-0 h-[1px] bg-gray-300"></div>
-                      <div className="absolute bottom-1/4 left-0 right-0 h-[1px] bg-gray-300"></div>
-                      <div className="absolute left-1/4 top-0 bottom-0 w-[1px] bg-gray-300"></div>
-                      <div className="absolute right-1/4 top-0 bottom-0 w-[1px] bg-gray-300"></div>
-                    </div>
+                  {/* Right Side: Laptop Illustration */}
+                  <div className="relative flex justify-center items-center mt-12 md:mt-0">
+                    <div className="relative w-full max-w-[240px] md:max-w-[280px] lg:max-w-[360px] group-hover:scale-[1.03] transition-transform duration-700">
+                      {/* Laptop Screen */}
+                      <div className="w-[200px] h-[135px] md:w-[240px] md:h-[160px] lg:w-[320px] lg:h-[215px] bg-[#1a1a2e] rounded-t-lg mx-auto relative overflow-hidden border-[3px] border-[#374151] border-b-0 shadow-2xl">
 
-                    <div className={`relative w-full ${service.id === '01' ? 'md:w-[160%] md:-right-[30%] lg:w-[170%] lg:-right-[35%] xl:w-[185%] xl:-right-[40%]' : 'md:w-[140%] md:-right-[20%]'}`}>
-                      <Image
-                        src={service.image}
-                        alt={titleParts[0].replace("\n", " ")}
-                        width={800}
-                        height={600}
-                        className="object-contain w-full h-auto drop-shadow-2xl group-hover:scale-[1.03] transition-transform duration-700 relative z-10"
-                      />
-                    </div>
-
-                    {/* Lucide Icons Stack */}
-                    <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col space-y-3 translate-x-4 md:translate-x-8 lg:translate-x-12 z-20">
-                      {service.icons.map((icon, i) => (
-                        <div
-                          key={i}
-                          className="w-10 h-10 lg:w-14 lg:h-14 bg-white border border-gray-100 shadow-md flex items-center justify-center transition-transform hover:scale-110"
-                          style={{ clipPath: "polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px)" }}
-                        >
-                          {icon}
+                        <div className="p-3 h-full flex flex-col">
+                          {/* Screen Header */}
+                          <div className="flex gap-1.5 mb-2.5">
+                            <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                            <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                            <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                          </div>
+                          {/* Screen Body */}
+                          <div className="flex-1 relative bg-white rounded overflow-hidden">
+                            <Image
+                              src={service.image}
+                              alt={service.title.replace("\n", " ")}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
                         </div>
-                      ))}
+                      </div>
+                      {/* Laptop Base */}
+                      <div className="w-[220px] md:w-[260px] lg:w-[340px] h-2 bg-[#d1d5db] rounded-b-md mx-auto relative">
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 md:w-10 h-1 bg-[#9ca3af] rounded-b-sm"></div>
+                      </div>
+
+                      {/* Floating Icons */}
+                      <div className="absolute -right-2 md:-right-4 lg:-right-8 top-4 lg:top-6 flex flex-col gap-2 md:gap-3 lg:gap-4">
+                        {service.icons.map((icon, i) => (
+                          <div
+                            key={i}
+                            className="w-7 h-7 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-white border border-nexage-red shadow-md rounded-full flex items-center justify-center transition-all hover:scale-110 hover:-translate-y-1"
+                          >
+                            <div className="text-gray-700 scale-[0.65] md:scale-75">{icon}</div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
