@@ -5,7 +5,7 @@
   --color-nexage-black: #0a0a0a;
   --color-nexage-dark: #111111;
   --color-nexage-gray: #F5F5F5;
-  --font-sans: "Inter", "Geist", ui-sans-serif, system-ui;
+  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 :root {
@@ -29,7 +29,12 @@
     opacity: 0.03;
     z-index: 9999;
     pointer-events: none;
-    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.9) 0.6px, transparent 0.8px),
+      radial-gradient(circle at 80% 30%, rgba(0, 0, 0, 0.7) 0.5px, transparent 0.8px),
+      radial-gradient(circle at 40% 80%, rgba(0, 0, 0, 0.75) 0.5px, transparent 0.8px);
+    background-size: 18px 18px, 24px 24px, 20px 20px;
+    background-position: 0 0, 6px 10px, 12px 4px;
   }
 
   .scanline {

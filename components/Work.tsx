@@ -34,7 +34,7 @@ export default function Work() {
   ];
 
   return (
-    <section id="work" className="py-32 bg-[#0a0a0a] text-white relative overflow-hidden">
+    <section id="work" className="scroll-mt-28 py-32 bg-[#0a0a0a] text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] to-[#111111] z-0"></div>
 
       <div className="container mx-auto px-8 relative z-10">

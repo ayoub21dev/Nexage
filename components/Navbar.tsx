@@ -2,10 +2,14 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const links = [
+    { href: "#services", label: "Services" },
+    { href: "#work", label: "Work" },
+    { href: "#contact", label: "Contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,13 +36,13 @@ export default function Navbar() {
 
         {/* Nav Links */}
         <div className="hidden lg:flex items-center justify-center space-x-10 flex-[2]">
-          {["Services", "Work", "About Us", "Insights", "Contact"].map((item) => (
+          {links.map((item) => (
             <Link
-              key={item}
-              href={`#${item.toLowerCase().replace(" ", "-")}`}
+              key={item.label}
+              href={item.href}
               className="text-[11px] font-black uppercase tracking-[0.25em] text-black/70 hover:text-nexage-red transition-all relative group"
             >
-              {item}
+              {item.label}
               <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-nexage-red transition-all duration-500 group-hover:w-full"></span>
             </Link>
           ))}

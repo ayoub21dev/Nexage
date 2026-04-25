@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Nexage | Engineering Digital Experiences",
@@ -16,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${inter.className} min-h-screen bg-white text-black antialiased relative`}>
+      <body className="font-sans min-h-screen bg-white text-black antialiased relative">
         <div className="noise-overlay"></div>
         {children}
       </body>

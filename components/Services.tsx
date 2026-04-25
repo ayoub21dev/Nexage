@@ -47,7 +47,7 @@ export default function Services() {
       title: "Graphic\nDesign .",
       description: "Visually compelling designs that communicate, engage, and leave a lasting impression.",
       bullets: ["Brand Identity", "UI/UX Design", "Web & Mobile Design", "Marketing Design", "Motion Graphics"],
-      image: "/service_graphic_design.png",
+      image: "/Herosection.png",
       icons: [
         <PenTool key="design-1" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
         <Palette key="design-2" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
@@ -74,7 +74,7 @@ export default function Services() {
     "polygon(16px 0, calc(50% - 16px) 0, 50% 12px, calc(50% + 16px) 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, calc(50% + 16px) 100%, 50% calc(100% - 12px), calc(50% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px)";
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-[#FAFAFA] relative overflow-hidden">
+    <section id="services" className="scroll-mt-28 py-24 md:py-32 bg-[#FAFAFA] relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute inset-0 z-0 pointer-events-none dot-pattern opacity-30"></div>
 

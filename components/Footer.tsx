@@ -3,8 +3,15 @@
 import Link from "next/link";
 
 export default function Footer() {
+  const navLinks = [
+    { href: "#home", label: "Home" },
+    { href: "#services", label: "Services" },
+    { href: "#work", label: "Work" },
+    { href: "#contact", label: "Contact" },
+  ];
+
   return (
-    <footer className="bg-white pt-24 pb-12 border-t border-gray-100 relative overflow-hidden">
+    <footer id="contact" className="scroll-mt-28 bg-white pt-24 pb-12 border-t border-gray-100 relative overflow-hidden">
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="lg:col-span-2">
@@ -35,13 +42,13 @@ export default function Footer() {
               Navigation
             </h4>
             <ul className="space-y-4">
-              {["Home", "Services", "Work", "About Us", "Insights", "Contact"].map((item) => (
-                <li key={item}>
+              {navLinks.map((item) => (
+                <li key={item.label}>
                   <Link
-                    href={`#${item.toLowerCase().replace(" ", "-")}`}
+                    href={item.href}
                     className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 hover:text-nexage-red transition-all"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
               ))}
