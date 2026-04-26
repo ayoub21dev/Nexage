@@ -5,24 +5,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  Brain,
-  Bot,
   Clock,
-  Code2,
-  Cpu,
   CornerDownLeft,
   CornerDownRight,
   CornerUpLeft,
   CornerUpRight,
-  Image as ImageIcon,
-  Layout,
-  Monitor,
-  Network,
-  Palette,
-  PenTool,
   Rocket,
-  Smartphone,
-  Terminal,
   Trophy,
   Users,
 } from "lucide-react";
@@ -35,12 +23,6 @@ export default function Services() {
       description: "High-performance websites and web applications built with clean code and modern technologies.",
       bullets: ["Custom Websites", "Web Applications", "E-Commerce Solutions", "CMS Development", "Performance Optimization"],
       image: "/devservice.png",
-      icons: [
-        <Code2 key="web-1" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
-        <Terminal key="web-2" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
-        <Monitor key="web-3" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
-        <Smartphone key="web-4" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
-      ],
     },
     {
       id: "02",
@@ -48,12 +30,6 @@ export default function Services() {
       description: "Visually compelling designs that communicate, engage, and leave a lasting impression.",
       bullets: ["Brand Identity", "UI/UX Design", "Web & Mobile Design", "Marketing Design", "Motion Graphics"],
       image: "/Graphicdesign.png",
-      icons: [
-        <PenTool key="design-1" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
-        <Palette key="design-2" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
-        <ImageIcon key="design-3" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
-        <Layout key="design-4" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
-      ],
     },
     {
       id: "03",
@@ -61,12 +37,13 @@ export default function Services() {
       description: "Intelligent automation and machine learning models tailored to optimize your business operations.",
       bullets: ["Machine Learning", "Natural Language Processing", "Predictive Analytics", "Process Automation", "AI Consultation"],
       image: "/AIsolution.png",
-      icons: [
-        <Cpu key="ai-1" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
-        <Brain key="ai-2" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
-        <Network key="ai-3" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
-        <Bot key="ai-4" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-700" strokeWidth={2.5} />,
-      ],
+    },
+    {
+      id: "04",
+      title: "App\nDevelopment .",
+      description: "Native and cross-platform mobile apps designed for smooth performance and everyday usability.",
+      bullets: ["iOS & Android Apps", "Cross-Platform Builds", "App UI/UX Design", "Backend Integration", "Store Deployment"],
+      image: "/devweb.png",
     },
   ];
 
@@ -78,7 +55,7 @@ export default function Services() {
       {/* Background accents */}
       <div className="absolute inset-0 z-0 pointer-events-none dot-pattern opacity-30"></div>
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10 w-full max-w-[1400px]">
+      <div className="container mx-auto px-6 md:px-12 relative z-10 w-full max-w-[1560px]">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-16 lg:mb-24 gap-8 lg:gap-16">
           <div className="flex-[1.2]">
@@ -113,7 +90,7 @@ export default function Services() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 mb-8">
+        <div className="grid grid-cols-1 2xl:grid-cols-2 gap-8 xl:gap-10 mb-8">
           {services.map((service, idx) => {
             const titleParts = service.title.split(" .");
             return (
@@ -127,7 +104,7 @@ export default function Services() {
                 style={{ clipPath: mainClipPath }}
               >
                 <div
-                  className="relative bg-white h-full w-full p-8 md:p-12 lg:p-16 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16"
+                  className="relative bg-white h-full w-full p-6 sm:p-8 lg:p-10 xl:p-12 2xl:p-10 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(260px,0.9fr)] gap-8 lg:gap-10 xl:gap-12 2xl:gap-8"
                   style={{ clipPath: mainClipPath }}
                 >
                   {/* Background decoration */}
@@ -135,30 +112,30 @@ export default function Services() {
 
                   {/* Corner Red Accents */}
                   <CornerUpLeft
-                    className="absolute top-4 left-4 w-10 h-10 text-nexage-red/70 pointer-events-none group-hover:text-nexage-red transition-colors duration-300"
+                    className="absolute top-5 left-5 w-8 h-8 sm:w-9 sm:h-9 text-nexage-red/55 pointer-events-none group-hover:text-nexage-red/80 transition-colors duration-300"
                     strokeWidth={1.8}
                   />
                   <CornerUpRight
-                    className="absolute top-4 right-4 w-10 h-10 text-nexage-red/70 pointer-events-none group-hover:text-nexage-red transition-colors duration-300"
+                    className="absolute top-5 right-5 w-8 h-8 sm:w-9 sm:h-9 text-nexage-red/55 pointer-events-none group-hover:text-nexage-red/80 transition-colors duration-300"
                     strokeWidth={1.8}
                   />
                   <CornerDownRight
-                    className="absolute bottom-4 right-4 w-10 h-10 text-nexage-red/70 pointer-events-none group-hover:text-nexage-red transition-colors duration-300"
+                    className="absolute bottom-5 right-5 w-8 h-8 sm:w-9 sm:h-9 text-nexage-red/55 pointer-events-none group-hover:text-nexage-red/80 transition-colors duration-300"
                     strokeWidth={1.8}
                   />
                   <CornerDownLeft
-                    className="absolute bottom-4 left-4 w-10 h-10 text-nexage-red/70 pointer-events-none group-hover:text-nexage-red transition-colors duration-300"
+                    className="absolute bottom-5 left-5 w-8 h-8 sm:w-9 sm:h-9 text-nexage-red/55 pointer-events-none group-hover:text-nexage-red/80 transition-colors duration-300"
                     strokeWidth={1.8}
                   />
 
                   {/* Left Side: Content */}
-                  <div className="flex flex-col items-start z-10">
+                  <div className="flex flex-col items-start z-10 pt-8 pb-10 sm:pt-10 sm:pb-12">
                     <span className="text-nexage-red font-bold text-lg mb-4 block leading-none">{service.id}</span>
-                    <h3 className="text-4xl md:text-5xl font-black text-black leading-[1.1] mb-5 tracking-tight uppercase whitespace-pre-line">
+                    <h3 className="text-3xl sm:text-4xl md:text-5xl 2xl:text-4xl font-black text-black leading-[1.1] mb-5 tracking-tight uppercase whitespace-pre-line">
                       {titleParts[0]}
                     </h3>
                     <div className="w-2.5 h-2.5 bg-nexage-red rounded-full mb-6"></div>
-                    <p className="text-[15px] text-gray-600 leading-relaxed mb-8 max-w-[300px]">
+                    <p className="text-[15px] text-gray-600 leading-relaxed mb-8 max-w-[360px]">
                       {service.description}
                     </p>
 
@@ -184,10 +161,10 @@ export default function Services() {
                   </div>
 
                   {/* Right Side: Laptop Illustration */}
-                  <div className="relative flex justify-center items-center mt-12 md:mt-0">
-                    <div className="relative w-full max-w-[240px] md:max-w-[280px] lg:max-w-[360px] group-hover:scale-[1.03] transition-transform duration-700">
+                  <div className="relative flex justify-center lg:justify-end items-center mt-10 lg:mt-0 min-w-0">
+                    <div className="relative w-full max-w-[230px] sm:max-w-[280px] lg:max-w-[340px] 2xl:max-w-[320px]">
                       {/* Laptop Screen */}
-                      <div className="w-[200px] h-[135px] md:w-[240px] md:h-[160px] lg:w-[320px] lg:h-[215px] bg-[#1a1a2e] rounded-t-lg mx-auto relative overflow-hidden border-[3px] border-[#374151] border-b-0 shadow-2xl">
+                      <div className="w-full aspect-[320/215] bg-[#1a1a2e] rounded-t-lg mx-auto relative overflow-hidden border-[3px] border-[#374151] border-b-0 shadow-2xl">
 
                         <div className="p-3 h-full flex flex-col">
                           {/* Screen Header */}
@@ -202,27 +179,17 @@ export default function Services() {
                               src={service.image}
                               alt={service.title.replace("\n", " ")}
                               fill
+                              sizes="(max-width: 640px) 230px, (max-width: 1024px) 280px, (max-width: 1536px) 340px, 320px"
                               className="object-cover"
                             />
                           </div>
                         </div>
                       </div>
                       {/* Laptop Base */}
-                      <div className="w-[220px] md:w-[260px] lg:w-[340px] h-2 bg-[#d1d5db] rounded-b-md mx-auto relative">
+                      <div className="w-[calc(100%+20px)] max-w-[360px] h-2 bg-[#d1d5db] rounded-b-md mx-auto relative">
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 md:w-10 h-1 bg-[#9ca3af] rounded-b-sm"></div>
                       </div>
 
-                      {/* Floating Icons */}
-                      <div className="absolute -right-2 md:-right-4 lg:-right-8 top-4 lg:top-6 flex flex-col gap-2 md:gap-3 lg:gap-4">
-                        {service.icons.map((icon, i) => (
-                          <div
-                            key={i}
-                            className="w-7 h-7 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-white border border-nexage-red shadow-md rounded-full flex items-center justify-center transition-all hover:scale-110 hover:-translate-y-1"
-                          >
-                            <div className="text-gray-700 scale-[0.65] md:scale-75">{icon}</div>
-                          </div>
-                        ))}
-                      </div>
                     </div>
                   </div>
                 </div>
